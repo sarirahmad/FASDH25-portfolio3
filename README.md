@@ -12,15 +12,15 @@ This project analyzes thematic similarity and content patterns in a collection o
 
 ### Overview:
 
-This part focuses on measuring how similar articles are to one another using TF-IDF, tracking article frequency and length over time, and analyzing thematic trends through topic modeling. The goal is to understand when and why articles become more aligned in content.
+This part focuses on the  similarity of articles using TF-IDF, tracking article counts and high similarity over specific time period, and analyzing thematic trends through topic modeling. The goal is to understand when and why articles become more aligned in content.
 
 ### Objectives
 
-* Calculate TF-IDF similarity scores between article pairs.
+* Exploring TF-IDF similarity scores between article pairs.
 
-* Track how similarity changes over time (month-to-month).
+* Tracking highest similarity of articles and counts of articles.
 
-* Count the number of articles and analyze their lengths across months.
+* Finding the similarity of articles from 0.7 - 0.85 and finding dates and time accordingly.
 
 * Apply topic modeling to uncover dominant themes during peaks in similarity.
 
@@ -29,11 +29,10 @@ This part focuses on measuring how similar articles are to one another using TF-
 * Python
 * pandas, plotly, datetime
 
-### Output (example):
-month       avg_similarity     num_articles     avg_length      top_topics
-2023-10     0.61               135              948 words       gaza | attack | israel | civilians
-2023-11     0.66               122              1003 words      aid | water | hospital | strike
-2023-12     0.53               145              876 words       UN | ceasefire | shelter | airstrikes
+### Output:
+1. A histogram of similarity and counts of articles.
+2. heatmap of similarity and specific time (month and year)
+3. Bar graph to see the themes of articles in the specific time framw. 
 
 
 ------------------------------------------------------------------------
@@ -55,13 +54,12 @@ This part of the project is concerened with finding the trends in Length (Mean L
 
 * Aljazera Articles 
 * Mean length of articles in 2023, Titles (for frequency during Oct-Dec2023), Topic Models (Oct-Dec2023). 
-* 
 
 ### Output (example):
 * I made visualizations through Bar graphs for:
-**Mean length
-**Frequency
-**Topic Models
+1. Mean length
+2. Frequency
+3. Topic Models
 That supported my argument.
 
 -----------------------------------------------------
@@ -93,7 +91,9 @@ That supported my argument.
 ### Output (structure):
 
 ```
-here
+1.
+2. 
+3.
 ```
 --------------------------------
 
