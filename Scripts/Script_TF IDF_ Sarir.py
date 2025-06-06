@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load TF-IDF pairwise similarity data
-df = pd.read_csv("C:/Users/LENOVO/Downloads/FASDH25-portfolio3/data/dataframes/tfidf/tfidf-over-0.3-len100.csv")
+df = pd.read_csv("C:/Users/DELL/Downloads/FASDH25-portfolio3/data/dataframes/tfidf/tfidf-over-0.3-len100.csv")
 
 # Create proper datetime columns
 df['date_1'] = pd.to_datetime(df['year-1'].astype(str) + '-' +
