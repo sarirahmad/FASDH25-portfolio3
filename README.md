@@ -64,37 +64,40 @@ That supported my argument.
 
 -----------------------------------------------------
 
-## 3: (fatima's part)
+## 3: (Fatima)
 
 ### Overview:
-
-
+This section analyzed article titles to explore patterns in media coverage over time. I tracked changes in publishing frequency, headline length, and common words, revealing how titles reflect media focus. While the analysis showed useful trends, it didn’t capture tone or deeper context.
 
 ### Input Data
-
-* 
+CSV file: "title.csv"
+Contains the following relevant columns:
+    - 'title': the title of each article
+    - 'year': year of publication
+    - 'month': month of publication
+    - 'day' : day of publication 
+    - 'length': full article length (word count)
 
 ### Tools and Functions
-
-* 
-* 
-* 
+* Pandas (for data loading and manipulation) 
+* Plotly.express (for interactive visualizations) 
+* Re (for regular expression-based word extraction)
+* Collections.Counter (for word frequency counting) 
 
 ### Process Summary
-
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Load the data:using `pandas` from the specified CSV file.
+2. Create a 'month' column: for easier grouping by combining year and month.
+3. Calculate article count per month: and visualize it as a bar chart.
+4. Compute average title word count: by month and plot it as a line chart.
+5. Extract common title words: using regular expressions and plot top 15 as a bar chart.
+6. Visualize relationship: between title length and full article length using a scatter plot.
+7. Save all plots: as interactive HTML files inside the `Scripts/Outputs/` folder.
 
 ### Output (structure):
-
-```
-1.
-2. 
-3.
-```
+1. A fluctuating but generally high volume of articles over time, with notable peaks in certain years(2023).
+2. Variations in title length, possibly reflecting shifts in reporting style.
+3. The dominance of conflict-related terminology in titles, suggesting a focus on specific geopolitical events.
+4. A weak correlation between title length and article length, indicating that longer titles do not necessarily correspond to longer articles.
 --------------------------------
 
 The End...
