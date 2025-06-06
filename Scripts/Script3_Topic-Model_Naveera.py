@@ -10,7 +10,7 @@ stop_words = set(stopwords.words("english"))
 df = pd.read_csv("../data/dataframes/topic-model/topic-model.csv") # I Loaded the CSV file
 print(df["Topic"].value_counts().sort_index())
 
-# Removing unclassified rows
+# Removing unclassified rows for making my data clean and coherent. 
 df = df[df["Topic"] != -1]
 
 #After manually examining the topic themes I saw some were irrelevant, therefore, listing topic numbers to remove
@@ -26,7 +26,7 @@ df['date'] = pd.to_datetime({
                             )
 # Filtering for Oct–Dec 2023 because it is the only part I am currently interested in
 df_filtered = df[(df['date'] >= '2023-10') & (df['date'] <= '2023-12')].copy()
-# Create 'Month' column directly as a datetime with the first day of each month (clean for plotting)
+# Creating 'Month' column directly as a datetime with the first day of each month (in this way, it becomes clean for plotting)
 df_filtered["Month"] = df_filtered["date"].dt.to_period("M").dt.to_timestamp()
 
 
@@ -42,7 +42,7 @@ def clean_keywords(row):
 
 df_filtered["Topic_Label"] = df_filtered.apply(clean_keywords, axis=1)
 
-# Grouping by topic and month
+# Grouping by topic and month for order (specially cronological order).
 grouped = df_filtered.groupby(["Topic_Label", "Month"]).size().reset_index(name="Article_Count")
 # Sorting by date for visual order so that I get a cronologially well orderd output
 grouped = grouped.sort_values("Month")

@@ -41,26 +41,28 @@ month       avg_similarity     num_articles     avg_length      top_topics
 ## Using Length and Topic Modeling (Naveera)
 
 ### Overview:
-
+This part of the project is concerened with finding the trends in Length (Mean Length specifically), Frequency (though analysing titles) and Topic Modleing to contextualize the change in all these dataset with time and intensity of war situation in Gaza. The aim was to find a trend that would justify our argument that Global Conflict etc significantly effects the lenght, frequency and topics of news to be disseminated. I observed a unique declining trend in the mean-length, while a uprising trend in the frequency of articles. This, in context of Gaza can be analysed as: since the war condition got worse by the end of 2023, there became a need of more fragmented information flow, rather than packed articles. Through the Topic modeling, this this was confimed that topics like patient, hospital, attacks and aids like topics were more in those short articles. 
 
 
 ### Environment Setup
+ 
+* Python
+* pandas, plotly, datetime, 
+* NLTK stopwords
 
-* 
-* 
-* 
 
 ### Corpus and Filtering
 
-* 
-* 
+* Aljazera Articles 
+* Mean length of articles in 2023, Titles (for frequency during Oct-Dec2023), Topic Models (Oct-Dec2023). 
 * 
 
 ### Output (example):
-
-```
-here
-```
+* I made visualizations through Bar graphs for:
+**Mean length
+**Frequency
+**Topic Models
+That supported my argument.
 
 -----------------------------------------------------
 
