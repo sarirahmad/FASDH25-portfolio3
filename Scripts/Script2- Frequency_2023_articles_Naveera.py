@@ -19,18 +19,18 @@ for filename in os.listdir(folder_path):
             if f'2023-{month}' in filename or f'2023_{month}' in filename:
                 article_counts[month] += 1
 
-# Converting the data recieved to list form for plotting
+# Converting the data recieved to list form for plotting and easy analysis
 months = list(article_counts.keys())
 counts = list(article_counts.values())
 
-# Create=ing a bar chart for easy visualization
+# Creating a bar chart for easy visualization of the finding
 fig = px.bar(x=months, y=counts,
              labels={'x': 'Month (2023)', 'y': 'Number of Articles'},
              title='Article Count Per Month in 2023')
 
-fig.update_layout(template='plotly_white') # again took help from the perviously learned method from AI. 
+fig.update_layout(template='plotly_white') # Took help from our Course TA. 
 
-# Save the chart for further analysis. 
+# Saving the chart for further analysis. 
 output_path = r'C:\Users\HP\Downloads\FASDH25-portfolio3\Scripts\Outputs\Bargraph-ArticleFrequency-Naveera.html'
 fig.write_html(output_path)
 print(f"Plot saved to: {output_path}")
