@@ -4,6 +4,33 @@ This project analyzes thematic similarity and content patterns in a collection o
 
 ## Folder Structure
 
+FASDH25-portfolio3/
+│
+├── data/
+│   └── dataframes/
+│       └── tfidf/
+│           ├── tfidf-over-0.3.csv
+│           ├── tfidf-over-0.3-len100.csv
+│           └── tfidf-over-0.3-len200.csv
+│
+├── Outputs/
+│   ├── Histogram_TFIDF_Sarir.html
+│   ├── Heatmap_TFIDF_Sarir.html
+│   ├── Filtered_Topics_BarGraph.html
+│   └── [Any additional saved figures or exports]
+│
+├── Scripts/
+│   ├── Script_TFIDF_Sarir.py
+│   ├── Script_TopicModeling_Sarir.py
+│   └── [Other scripts by team members]
+│
+├── AI Documentation/
+│   └── README.md (or AI summary/instructions)
+│
+├── Report/
+│   └── Project_Report.docx (Final Turnitin Submission)
+│
+└── README.md (Project overview, setup instructions, and folder structure)
 
 
 ---------------------------------------------
@@ -79,6 +106,7 @@ Contains the following relevant columns:
     - 'length': full article length (word count)
 
 ### Tools and Functions
+* Python 
 * Pandas (for data loading and manipulation) 
 * Plotly.express (for interactive visualizations) 
 * Re (for regular expression-based word extraction)
