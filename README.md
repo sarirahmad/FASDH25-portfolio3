@@ -12,15 +12,15 @@ This project analyzes thematic similarity and content patterns in a collection o
 
 ### Overview:
 
-This part focuses on measuring how similar articles are to one another using TF-IDF, tracking article frequency and length over time, and analyzing thematic trends through topic modeling. The goal is to understand when and why articles become more aligned in content.
+This part focuses on the  similarity of articles using TF-IDF, tracking article counts and high similarity over specific time period, and analyzing thematic trends through topic modeling. The goal is to understand when and why articles become more aligned in content.
 
 ### Objectives
 
-* Calculate TF-IDF similarity scores between article pairs.
+* Exploring TF-IDF similarity scores between article pairs.
 
-* Track how similarity changes over time (month-to-month).
+* Tracking highest similarity of articles and counts of articles.
 
-* Count the number of articles and analyze their lengths across months.
+* Finding the similarity of articles from 0.7 - 0.85 and finding dates and time accordingly.
 
 * Apply topic modeling to uncover dominant themes during peaks in similarity.
 
@@ -29,11 +29,10 @@ This part focuses on measuring how similar articles are to one another using TF-
 * Python
 * pandas, plotly, datetime
 
-### Output (example):
-month       avg_similarity     num_articles     avg_length      top_topics
-2023-10     0.61               135              948 words       gaza | attack | israel | civilians
-2023-11     0.66               122              1003 words      aid | water | hospital | strike
-2023-12     0.53               145              876 words       UN | ceasefire | shelter | airstrikes
+### Output:
+1. A histogram of similarity and counts of articles.
+2. heatmap of similarity and specific time (month and year)
+3. Bar graph to see the themes of articles in the specific time framw. 
 
 
 ------------------------------------------------------------------------
@@ -55,46 +54,50 @@ This part of the project is concerened with finding the trends in Length (Mean L
 
 * Aljazera Articles 
 * Mean length of articles in 2023, Titles (for frequency during Oct-Dec2023), Topic Models (Oct-Dec2023). 
-* 
 
 ### Output (example):
 * I made visualizations through Bar graphs for:
-**Mean length
-**Frequency
-**Topic Models
+1. Mean length
+2. Frequency
+3. Topic Models
 That supported my argument.
 
 -----------------------------------------------------
 
-## 3: (fatima's part)
+## 3: (Fatima)
 
 ### Overview:
-
-
+This section analyzed article titles to explore patterns in media coverage over time. I tracked changes in publishing frequency, headline length, and common words, revealing how titles reflect media focus. While the analysis showed useful trends, it didn’t capture tone or deeper context.
 
 ### Input Data
-
-* 
+CSV file: "title.csv"
+Contains the following relevant columns:
+    - 'title': the title of each article
+    - 'year': year of publication
+    - 'month': month of publication
+    - 'day' : day of publication 
+    - 'length': full article length (word count)
 
 ### Tools and Functions
-
-* 
-* 
-* 
+* Pandas (for data loading and manipulation) 
+* Plotly.express (for interactive visualizations) 
+* Re (for regular expression-based word extraction)
+* Collections.Counter (for word frequency counting) 
 
 ### Process Summary
-
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Load the data:using `pandas` from the specified CSV file.
+2. Create a 'month' column: for easier grouping by combining year and month.
+3. Calculate article count per month: and visualize it as a bar chart.
+4. Compute average title word count: by month and plot it as a line chart.
+5. Extract common title words: using regular expressions and plot top 15 as a bar chart.
+6. Visualize relationship: between title length and full article length using a scatter plot.
+7. Save all plots: as interactive HTML files inside the `Scripts/Outputs/` folder.
 
 ### Output (structure):
-
-```
-here
-```
+1. A fluctuating but generally high volume of articles over time, with notable peaks in certain years(2023).
+2. Variations in title length, possibly reflecting shifts in reporting style.
+3. The dominance of conflict-related terminology in titles, suggesting a focus on specific geopolitical events.
+4. A weak correlation between title length and article length, indicating that longer titles do not necessarily correspond to longer articles.
 --------------------------------
 
 The End...
